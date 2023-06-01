@@ -1,0 +1,210 @@
+$color-green: #39c626;
+$dark-grey: #333;
+$med-dark-grey: #444;
+$soft-grey: #c9c9c9;
+$responsive-width: 1000px;
+
+//@media screen and (max-width: $responsive-width) {}
+
+.progress-container {
+  background-color: rgba(250, 250, 250, 0.6);
+  margin-top: 3%;
+  width: 90vw;
+  border-radius: 10px;
+
+  .progress-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(150, 150, 150, 0.6);
+    border-radius: 10px;
+    @media screen and (max-width: $responsive-width) {
+      flex-direction: row-reverse;
+      justify-content: space-evenly;
+    }
+
+    img {
+      width: 15vh;
+      height: 15vh;
+      border-radius: 50%;
+      margin: 1% 5%;
+      @media screen and (max-width: $responsive-width) {
+        width: 10vh;
+        height: 10vh;
+        margin: 5% 5%;
+      }
+    }
+
+    .left-header {
+      padding-left: 3vw;
+      h1 {
+        display: block;
+        text-transform: uppercase;
+        font-size: 5vw;
+        margin: 0;
+        color: #444;
+        @media screen and (max-width: $responsive-width) {
+          font-size: 4vh;
+          text-align: center;
+        }
+      }
+      hr {
+        border: 5px solid #444;
+        width: 40%;
+        margin: 5px 5px;
+        @media screen and (max-width: $responsive-width) {
+          border: 3px solid #444;
+          display: none;
+        }
+      }
+    }
+  }
+
+  .progress-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 3% 5%;
+    margin-bottom: 20px;
+    @media screen and (max-width: $responsive-width) {
+      flex-direction: column;
+      padding: 10% 5%;
+    }
+    .user-packs {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-between;
+      border-left: solid 8px #39c626;
+      padding: 0 20px;
+      height: 29vh;
+      @media screen and (max-width: $responsive-width) {
+        margin-bottom: 40px;
+        height: 100%;
+      }
+      .user-packs-details {
+        .streams-left-number {
+          color: #333;
+          font-size: 20vh;
+          font-weight: 600;
+          line-height: 0.8;
+          @media screen and (max-width: $responsive-width) {
+            font-size: 20vh;
+          }
+        }
+      }
+      .streams-left-description {
+        font-size: 3vh;
+        text-transform: uppercase;
+        color: #444;
+        font-weight: 900;
+        margin-bottom: 10px;
+      }
+    }
+
+    .taken-streams {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-between;
+      border-left: solid 8px #39c626;
+      padding: 0 20px;
+      height: 29vh;
+      @media screen and (max-width: $responsive-width) {
+        margin-bottom: 40px;
+        height: 100%;
+      }
+
+      .taken-streams-number {
+        color: #333;
+        font-size: 20vh;
+        font-weight: 600;
+        line-height: 0.8;
+        @media screen and (max-width: $responsive-width) {
+          font-size: 20vh;
+        }
+      }
+
+      .taken-streams-description {
+        font-size: 3vh;
+        text-transform: uppercase;
+        color: #444;
+        font-weight: 900;
+        margin-bottom: 10px;
+      }
+    }
+
+    .stats-profes-style {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      border-left: solid 8px #39c626;
+      padding: 20px 0 0 40px;
+      height: 29vh;
+      @media screen and (max-width: $responsive-width) {
+        height: 100%;
+      }
+
+      .favourite-profe {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 40px;
+        .stats-description {
+          font-size: 2.5vh;
+          color: #444;
+          font-weight: 700;
+          text-transform: uppercase;
+          margin-bottom: 10px;
+        }
+        .favourite-profe-content {
+          text-transform: uppercase;
+          background-color: #333;
+          color: white;
+          border-radius: 10px;
+          font-size: 2.5vh;
+          font-weight: 700;
+          text-align: center;
+          padding: 5px 20px;
+        }
+        .favourite-profe-qty {
+          font-size: 2vh;
+          font-weight: 500;
+        }
+      }
+
+      .favourite-style {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 40px;
+        .stats-description {
+          font-size: 2.5vh;
+          color: #444;
+          font-weight: 700;
+          text-transform: uppercase;
+          margin-bottom: 10px;
+        }
+        .favourite-style-content {
+          text-transform: uppercase;
+          background-color: #333;
+          color: white;
+          border-radius: 10px;
+          font-size: 2.5vh;
+          font-weight: 700;
+          text-align: center;
+          padding: 5px 20px;
+        }
+      }
+    }
+  }
+
+  .loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20vh;
+  }
+}

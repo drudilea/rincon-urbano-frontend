@@ -1,0 +1,111 @@
+$color-green: #39c626;
+$dark-grey: #333;
+$med-dark-grey: #444;
+$soft-grey: #c9c9c9;
+$normal-responsive-width: 950px;
+$tablet-responsive-width: 1300px;
+$older-responsive-width: 400px;
+
+.nosotros-section {
+  background: url(https://firebasestorage.googleapis.com/v0/b/rincon-urbano.appspot.com/o/web-images%2Fnosotros-background.png?alt=media&token=07984243-3781-4c4f-b9eb-b80cf48867ed)
+    no-repeat center center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  .nosotros-container {
+    position: relative;
+    margin: 7% 0;
+    width: 90%;
+    background-color: $soft-grey;
+
+    @media screen and (max-width: $tablet-responsive-width) {
+      margin: 8% 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      padding: 2vw;
+    }
+    @media screen and (max-width: $normal-responsive-width) {
+      margin: 20% 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      padding: 2vw;
+    }
+
+    h1 {
+      font-family: 'Montserrat', 'Gothic A1', 'Source Sans Pro';
+      text-transform: uppercase;
+      font-size: 5vw;
+      color: $dark-grey;
+      font-weight: 900;
+      margin: 0;
+      padding: 2% 4% 4vh 3%;
+      letter-spacing: -1.5px;
+      @media screen and (max-width: $tablet-responsive-width) {
+        font-size: 7vw;
+        text-align: center;
+        padding: 0 4vw 0 4vw;
+      }
+      @media screen and (max-width: $normal-responsive-width) {
+        font-size: 10vw;
+        text-align: center;
+        padding: 0;
+      }
+    }
+    hr {
+      border: 3px solid $color-green;
+      width: 20%;
+      margin: 0 0 0 3%;
+      @media screen and (max-width: $tablet-responsive-width) {
+        border: 3px solid $color-green;
+        margin: 2vh 0;
+        width: 60%;
+      }
+    }
+    p {
+      font-family: 'Source Sans Pro', 'Montserrat', 'Gothic A1', Arial,
+        Helvetica;
+      font-size: 1.5em;
+      letter-spacing: 0.5px;
+      color: $dark-grey;
+      padding: 4vh 0% 0 3%;
+      max-width: 40%;
+      line-height: 1.7;
+      font-weight: 400;
+      margin: 0;
+      margin-bottom: 10%;
+      @media screen and (max-width: $tablet-responsive-width) {
+        max-width: 100%;
+        font-size: 1.5em;
+        padding: 0.5em;
+        text-align: center;
+        line-height: 1.5;
+        margin-bottom: 5%;
+      }
+      @media screen and (max-width: $normal-responsive-width) {
+        max-width: 100%;
+        font-size: 1.3em;
+        padding: 0.5em;
+        text-align: center;
+        line-height: 1.5;
+      }
+    }
+    img {
+      width: 54%;
+      position: absolute;
+      top: 25%;
+      left: 48%;
+      @media screen and (max-width: $tablet-responsive-width) {
+        display: none;
+      }
+      @media screen and (max-width: $normal-responsive-width) {
+        display: none;
+      }
+    }
+  }
+}

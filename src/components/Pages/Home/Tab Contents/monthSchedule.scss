@@ -1,0 +1,327 @@
+$streetdance-color: #be9c02;
+$popping-color: #df1c02;
+$hiphop-color: #2b39b8;
+$reggaeton-color: #ec7100;
+$heels-color: #ae01ff;
+$contemporaneo-color: #00cec2;
+$jazz-color: #ff1da4;
+$dancehall-color: #239728;
+$estilosurbanos-color: #a6db51;
+$nimamau-color: #a6db51;
+///////////////////////////
+$color-green: #39c626;
+$dark-grey: #333;
+$med-dark-grey: #444;
+$soft-grey: #c9c9c9;
+$responsive-width: 900px;
+
+.week-schedule-container {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 1vw 1vw;
+    grid-template-areas: '. . . .';
+    max-width: 90vw;
+    @media screen and (max-width: $responsive-width) {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .week-container {
+      background-color: rgba(250, 250, 250, 0.2);
+      display: flex;
+      flex-direction: column;
+      h1 {
+        text-align: center;
+        margin-bottom: 0;
+        color: $color-green;
+        text-transform: uppercase;
+        font-family: 'Montserrat', 'Gothic A1', Helvetica, sans-serif;
+        font-weight: 900;
+        @media screen and (max-width: $responsive-width) {
+          margin: 15px 0;
+        }
+      }
+
+      @media screen and (max-width: $responsive-width) {
+        margin: 1vh 0;
+        padding: 0.5vh 0;
+        width: 90vw;
+      }
+      .carousel-responsive {
+        display: none;
+        @media screen and (max-width: $responsive-width) {
+          display: block;
+          max-width: 90vw;
+        }
+      }
+      .non-carousel-responsive {
+        display: block;
+        @media screen and (max-width: $responsive-width) {
+          display: none;
+        }
+      }
+
+      .stream-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        background-color: #222;
+        margin: 20px;
+        padding: 0;
+        font-family: 'Source Sans Pro', 'Montserrat', 'Gothic A1';
+
+        @media screen and (max-width: $responsive-width) {
+          align-items: center;
+          height: 70%;
+          min-height: 15vh;
+          width: 80%;
+          margin: 0px;
+        }
+        .top-stream-item {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          grid-template-rows: 1fr;
+          gap: 1px 1px;
+          grid-template-areas: '. .';
+          width: 100%;
+          @media screen and (max-width: $responsive-width) {
+            display: flex;
+            flex: 1;
+            height: 100%;
+          }
+
+          .top-left-stream-item {
+            position: relative;
+            @media screen and (max-width: $responsive-width) {
+              display: none;
+            }
+            img {
+              width: 100%;
+              height: 10em;
+              object-fit: cover;
+            }
+          }
+
+          .top-right-stream-item {
+            display: flex;
+            flex: 1;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            @media screen and (max-width: $responsive-width) {
+              justify-content: space-between;
+              margin: 0px;
+            }
+
+            .stream-item-style {
+              font-family: 'Source Sans Pro', 'Montserrat', 'Gothic A1';
+              text-transform: uppercase;
+              font-size: 12pt;
+              font-weight: 600;
+              color: white;
+              padding: 0 5px;
+              border-radius: 0 0 2px 2px;
+              text-align: center;
+              @media screen and (max-width: $responsive-width) {
+                font-size: 8pt;
+                font-weight: 600;
+              }
+
+              &.popping {
+                background-color: $popping-color;
+              }
+
+              &.streetdance {
+                background-color: $streetdance-color;
+              }
+
+              &.dancehall {
+                background-color: $dancehall-color;
+              }
+
+              &.estilosurbanos {
+                background-color: $estilosurbanos-color;
+              }
+
+              &.hiphop {
+                background-color: $hiphop-color;
+              }
+
+              &.reggaeton {
+                background-color: $reggaeton-color;
+              }
+
+              &.heels {
+                background-color: $heels-color;
+              }
+
+              &.contemporaneo {
+                background-color: $contemporaneo-color;
+              }
+
+              &.jazz {
+                background-color: $jazz-color;
+              }
+
+              &.nimamau {
+                background-color: $nimamau-color;
+              }
+            }
+
+            .stream-item-teacher {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: flex-end;
+              text-transform: uppercase;
+              color: white;
+              line-height: 0.9;
+
+              .stream-item-teacher-firstname {
+                font-weight: 900;
+                font-size: 1.8vw;
+                @media screen and (max-width: $responsive-width) {
+                  font-size: 5vw;
+                }
+              }
+              .stream-item-teacher-lastname {
+                font-weight: 400;
+                font-size: 1vw;
+                @media screen and (max-width: $responsive-width) {
+                  font-size: 4vw;
+                }
+              }
+            }
+
+            .stream-item-song {
+              display: flex;
+              flex-direction: column;
+              color: white;
+              font-weight: 500;
+              font-size: 1.2em;
+              line-height: 0.9;
+              text-align: center;
+              .stream-song-name {
+                @media screen and (max-width: $responsive-width) {
+                  font-size: 10pt;
+                  margin: 2px 0;
+                }
+              }
+              .stream-song-artist {
+                @media screen and (max-width: $responsive-width) {
+                  font-size: 9pt;
+                  margin: 2px 0;
+                }
+              }
+            }
+          }
+        }
+
+        .bottom-stream-item {
+          width: 100%;
+          display: flex;
+          flex: 1;
+          align-items: center;
+          justify-content: center;
+          margin-top: 5px;
+          button {
+            background-color: #eee;
+            outline: none;
+            border: none;
+            padding: 5px 20px;
+            margin-bottom: 10px;
+            width: 90%;
+            transition: 0.5s all;
+            @media screen and (max-width: $responsive-width) {
+              padding: 0;
+              margin-bottom: 0px;
+              width: 90%;
+              transition: 0.5s all;
+            }
+
+            .button-text {
+              color: #333;
+              text-transform: uppercase;
+              font-size: 15px;
+              font-weight: 700;
+              letter-spacing: 0.5px;
+              @media screen and (max-width: $responsive-width) {
+                letter-spacing: 0;
+                font-size: 8pt;
+                font-weight: 600;
+              }
+            }
+
+            &:hover {
+              padding: 5px 40px;
+              background-color: $color-green;
+              cursor: pointer;
+              .button-text {
+                color: white;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .no-streams {
+    background-color: rgba(200, 200, 200, 0.05);
+    padding: 5vh 20vw;
+    max-width: 90vw;
+    @media screen and (max-width: $responsive-width) {
+      padding: 2vh 2vw;
+    }
+    p {
+      text-align: center;
+      color: white;
+      font-size: 2vh;
+      font-family: 'Source Sans Pro', 'Montserrat', 'Gothic A1', Arial,
+        Helvetica, sans-serif;
+    }
+  }
+
+  .advertencia-clases-guardadas {
+    background-color: rgba(200, 200, 200, 0.05);
+    padding: 0.5vh 20vw;
+    max-width: 90vw;
+    margin: 2vh 2vw;
+    @media screen and (max-width: $responsive-width) {
+      margin: 1vh 1vw;
+      padding: 2vh 2vw;
+    }
+    p {
+      text-align: center;
+      color: white;
+      font-size: 2vh;
+      font-family: 'Source Sans Pro', 'Montserrat', 'Gothic A1', Arial,
+        Helvetica, sans-serif;
+    }
+  }
+}
+
+.BrainhubCarousel__arrows {
+  @media screen and (max-width: $responsive-width) {
+    padding: 15px !important;
+    display: block !important;
+    background-color: #39c626 !important;
+    transform: scale(0.7);
+    &.BrainhubCarousel__arrowLeft {
+      margin: 0 5px 0 0 !important;
+    }
+    &.BrainhubCarousel__arrowRight {
+      margin: 0 0 0 5px !important;
+    }
+  }
+  span {
+  }
+}

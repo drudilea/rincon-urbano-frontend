@@ -1,0 +1,132 @@
+//@media screen and (max-width: $responsive-width) {}
+$responsive-width: 1000px;
+$responsive-height: 700px;
+$color-green: #39c626;
+$dark-grey: #333;
+$med-dark-grey: #444;
+$background-grey: #eee;
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .form-input {
+    font-family: 'Source Sans Pro', 'Gothic A1', 'Montserrat', Arial;
+    width: 20vw;
+    height: 3em;
+    font-size: 15px;
+    background-color: #eee;
+    -webkit-box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.09);
+    -moz-box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.09);
+    box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.09);
+    border: solid 1px #cbc9c9;
+    padding-left: 25px;
+    margin: 1em 0;
+    outline: none;
+    border-radius: 5px;
+    font-weight: 500;
+    color: #333;
+
+    &:active,
+    &:focus {
+      color: #666;
+      text-decoration: none;
+      background: #fff;
+      box-shadow: 2px 2px 5px #888;
+    }
+
+    @media screen and (max-height: $responsive-height) {
+      height: 5vh;
+      margin: 0.5em 0;
+    }
+
+    @media screen and (max-width: $responsive-width) {
+      font-size: 1em;
+      width: 60vw;
+      height: 5vh;
+      margin: 0.5em 0;
+    }
+  }
+
+  .signIn-button {
+    font-family: 'Source Sans Pro', 'Gothic A1', 'Montserrat', Arial;
+    font-size: 20px;
+    letter-spacing: 1.5px;
+    text-align: center;
+    font-weight: 400;
+    background: $color-green;
+    border: none;
+    color: #fff;
+    overflow: hidden;
+    transition: all 0.3s;
+    border-radius: 5px;
+    padding: 1vh 1vw;
+    margin: 1vh;
+    cursor: no-drop;
+
+    &:hover:enabled,
+    &:active:enabled {
+      text-decoration: none;
+      color: #39c626;
+      border-color: #39c626;
+      background: #fff;
+      box-shadow: 2px 2px 5px #333;
+      cursor: pointer;
+    }
+    &:disabled {
+      opacity: 0.5;
+    }
+
+    @media screen and (max-width: $responsive-width) {
+      padding: 0.5vh 5vw;
+      margin-top: 3vh;
+    }
+  }
+}
+
+.register-error {
+  background-color: rgba(255, 0, 0, 0.7);
+  padding: 5px 10px;
+  position: fixed;
+  top: 73%;
+  align-self: center;
+  border-radius: 50px;
+  text-align: center;
+  color: white;
+  max-width: 60%;
+
+  -webkit-animation: cssAnimation 10s forwards;
+  animation: cssAnimation 10s forwards;
+
+  @keyframes cssAnimation {
+    0% {
+      opacity: 1;
+    }
+    90% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  @-webkit-keyframes cssAnimation {
+    0% {
+      opacity: 1;
+    }
+    90% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  &.google {
+    right: 2%;
+  }
+  &.facebook {
+    right: 2%;
+  }
+}

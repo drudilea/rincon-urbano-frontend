@@ -1,0 +1,53 @@
+$color-green: #39c626;
+$dark-grey: #333;
+$med-dark-grey: #444;
+$soft-grey: #c9c9c9;
+$normal-responsive-width: 950px;
+$tablet-responsive-width: 1300px;
+$older-responsive-width: 400px;
+
+.rooms-content-container {
+  padding: 0 4%;
+  background-color: #333;
+  min-height: 65vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @media screen and (max-width: $normal-responsive-width) {
+    padding: 0;
+    height: 100%;
+    min-height: 30vh;
+  }
+  .tab-content {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+    grid-template-areas: '. .';
+    padding: 0.2% 4%;
+    @media screen and (max-width: $normal-responsive-width) {
+      padding: 4vh 4%;
+    }
+    span {
+      font-family: 'Source Sans Pro', 'Gothic A1', 'Montserrat', Arial,
+        Helvetica;
+      line-height: 1.8;
+      color: white;
+      font-size: 2em;
+      font-weight: 400;
+      @media screen and (max-width: $normal-responsive-width) {
+        font-size: 0.8em;
+      }
+    }
+    .content-image-container {
+      display: flex;
+      justify-content: center;
+      img {
+        max-width: 30vw;
+        @media screen and (max-width: $normal-responsive-width) {
+          max-width: 40vw;
+          max-height: 40vw;
+        }
+      }
+    }
+  }
+}

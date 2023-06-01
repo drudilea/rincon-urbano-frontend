@@ -1,0 +1,246 @@
+// @media screen and (max-width: $responsive-width) {  }
+$responsive-width: 900px;
+$color-green: #39c626;
+$dark-grey: #333;
+$med-dark-grey: #444;
+$soft-grey: #888;
+
+$responsive-small: 1000px;
+
+////////////////////////////
+// PHONE USERS NAV BAR ////
+//////////////////////////
+.responsive-bar {
+  display: none;
+  width: 90vw;
+  background-color: rgba(150, 150, 150, 0.05);
+  @media screen and (max-width: $responsive-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0vh 5vw;
+    .nav-logo {
+      width: 20vw;
+      margin: 10px 0;
+    }
+  }
+
+  .bm-item-list {
+    height: 70% !important;
+  }
+
+  .bm-icon {
+    border-radius: 50% !important;
+  }
+
+  .burger-menu-profile {
+    display: flex !important;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: right;
+    padding-right: 6vw;
+    margin-bottom: 5vh;
+    outline: none !important;
+
+    .burger-menu-img {
+      filter: invert(0);
+      width: 10vw;
+      height: 10vw;
+      border-radius: 50%;
+      margin: 1vh 0;
+    }
+
+    .burger-menu-name {
+      color: white;
+      margin-bottom: 0.5vh;
+    }
+    button {
+      padding: 0;
+    }
+
+    .button-signout {
+      display: flex !important;
+      justify-content: flex-start;
+      align-items: center;
+      text-decoration: none;
+
+      p {
+        color: white;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-weight: 400;
+        font-size: 1.5vh;
+        padding: 0;
+        margin: 0;
+      }
+      img {
+        filter: invert(1);
+        width: 10%;
+        height: 10%;
+      }
+    }
+  }
+
+  .burger-menu-item {
+    outline: none !important;
+    display: flex !important;
+    justify-content: flex-end;
+    align-items: center;
+    text-decoration: none;
+    padding-right: 4vw;
+    margin: 0.5vh 0;
+    &:hover {
+      opacity: 0.8;
+    }
+    background-color: #444;
+    p {
+      color: white;
+      text-transform: uppercase;
+      text-decoration: none;
+      font-weight: 400;
+      font-size: 2vh;
+      padding: 0;
+      margin: 1vh;
+    }
+    img {
+      filter: invert(1);
+      width: 10%;
+      height: 10%;
+    }
+  }
+}
+
+////////////////////////////
+// PHONE USERS NAV BAR ////
+//////////////////////////
+.navbar-container-auth {
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1% 0;
+  background: rgb(34, 34, 34);
+  background: linear-gradient(
+    180deg,
+    rgba(34, 34, 34, 1) 0%,
+    rgba(51, 51, 51, 0.75) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  @media screen and (max-width: $responsive-width) {
+    display: none;
+  }
+
+  /*
+    * LEFT SIDE OF NAV BAR:
+    *   - WHITE LOGO
+    *   - NAVIGATION INSIDE
+    */
+  .navbar-left {
+    font-family: 'Gothic A1';
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 0 0 4%;
+    width: 50vw;
+
+    img {
+      width: 15%;
+      @media screen and (max-width: $responsive-width) {
+        display: none;
+      }
+    }
+
+    @media screen and (max-width: $responsive-width) {
+      width: 100vw;
+    }
+  }
+
+  /*
+  * RIGTH SIDE OF NAV BAR:
+  *   - REGISTER AND LOGIN -> when not auth
+  *   - DECIDIR -> when auth
+  */
+
+  .navbar-right {
+    @media screen and (max-width: $responsive-width) {
+      display: none;
+    }
+    margin-right: 1vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 50vw;
+
+    .normal-btn {
+      display: flex;
+      align-items: center;
+      color: white;
+      text-decoration: none;
+      font-family: 'Montserrat', 'Source Sans Pro', 'Gothic A1';
+      font-weight: 600;
+      font-size: 15px;
+      text-transform: uppercase;
+      margin: 0 1%;
+      transition: 0.3s all;
+      &:hover {
+        border-bottom: 4px solid $color-green;
+      }
+      img {
+        max-height: 20px;
+        max-width: 30px;
+        filter: invert(1);
+        padding: 10px;
+        @media screen and (max-width: $responsive-width) {
+          display: none;
+        }
+      }
+      @media screen and (max-width: $responsive-width) {
+        font-size: 10px;
+      }
+    }
+
+    .buy-btn {
+      font-family: 'Montserrat', 'Source Sans Pro', 'Gothic A1';
+      background: #39c626;
+      text-decoration: none;
+      position: relative;
+      padding: 5px 20px;
+      border-radius: 5px;
+      display: inline-block;
+      transition: all 0.3s;
+      outline: none;
+      border: none;
+      cursor: pointer;
+      @media screen and (max-width: $responsive-width) {
+        padding: 0px;
+      }
+      p {
+        color: #fff;
+        font-weight: 600;
+        font-size: 15px;
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+        @media screen and (max-width: $responsive-width) {
+          font-size: 10px;
+        }
+      }
+
+      &:hover {
+        box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2);
+        transform: translateY(-3px);
+      }
+    }
+
+    .profile-pic {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      @media screen and (max-width: $responsive-width) {
+        display: none;
+      }
+    }
+  }
+}

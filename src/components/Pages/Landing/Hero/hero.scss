@@ -1,0 +1,136 @@
+$color-green: #39c626;
+$dark-grey: #333;
+$med-dark-grey: #444;
+$soft-grey: #c9c9c9;
+$normal-responsive-width: 950px;
+$tablet-responsive-width: 1300px;
+$older-responsive-width: 400px;
+
+.landing-hero {
+  background: url(https://firebasestorage.googleapis.com/v0/b/rincon-urbano.appspot.com/o/web-images%2FHero-Cover.png?alt=media&token=3d2358d6-6fc8-43f6-8086-250c859fac2f)
+    no-repeat left center;
+  background-size: cover;
+  image-rendering: auto;
+  @media screen and (max-width: $tablet-responsive-width) {
+    background-position: -0px;
+  }
+  @media screen and (max-width: $normal-responsive-width) {
+    background-position: 0px;
+  }
+
+  .main-hero {
+    margin-top: 8%;
+    .left-hero {
+      width: 50%;
+      padding: 0 0 0 10%;
+      @media screen and (max-width: $normal-responsive-width) {
+        width: 98vw;
+        padding: 8vh 1vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      h1 {
+        font-family: 'Montserrat', 'Gothic A1', Helvetica, sans-serif;
+        font-size: 5em;
+        font-weight: 900;
+        margin: 0;
+        padding: 0;
+        text-transform: uppercase;
+        color: $color-green;
+        @media screen and (max-width: $tablet-responsive-width) {
+          font-size: 5vw;
+        }
+        @media screen and (max-width: $normal-responsive-width) {
+          font-size: 12vw;
+          text-align: center;
+        }
+      }
+      hr {
+        border: 3px solid white;
+        width: 30%;
+        margin: 40px 0;
+        @media screen and (max-width: $tablet-responsive-width) {
+          width: 40%;
+        }
+        @media screen and (max-width: $normal-responsive-width) {
+          margin: 20px 0;
+        }
+      }
+      h2 {
+        font-family: 'Source Sans Pro', 'Gothic A1', 'Montserrat', Arial,
+          Helvetica;
+        text-transform: none;
+        font-size: 1.5em;
+        color: white;
+        letter-spacing: 2px;
+        font-weight: 400;
+        max-width: 70%;
+        margin-bottom: 5%;
+        @media screen and (max-width: $tablet-responsive-width) {
+          font-size: 1.1em;
+          margin-bottom: 5%;
+        }
+        @media screen and (max-width: $normal-responsive-width) {
+          font-size: 1.2em;
+          text-align: center;
+          max-width: 90%;
+          margin-bottom: 15%;
+        }
+        @media screen and (max-width: $older-responsive-width) {
+          font-size: 0.9em;
+          text-align: center;
+          max-width: 90%;
+          margin-bottom: 15%;
+        }
+      }
+
+      .free-class-btn {
+        text-decoration: none;
+        text-transform: uppercase;
+        padding: 10px 35px;
+        border-radius: 5px;
+        display: inline-block;
+        transition: all 0.3s;
+        background: $color-green;
+        font-weight: 600;
+        @media screen and (max-width: $normal-responsive-width) {
+          width: 60%;
+          border-radius: 10px;
+          padding: 10px 10px;
+        }
+        p {
+          color: #fff;
+          text-decoration: none;
+          font-size: 20px;
+          letter-spacing: 1px;
+          padding: 0;
+          margin: 0;
+          text-align: center;
+          font-size: 1.2em;
+          @media screen and (max-width: $tablet-responsive-width) {
+            font-size: 1em;
+          }
+        }
+      }
+    }
+  }
+  .arrow-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 6%;
+    @media screen and (max-width: $tablet-responsive-width) {
+      margin-top: 0%;
+    }
+
+    .down-arrow {
+      width: 1%;
+      @media screen and (max-width: $normal-responsive-width) {
+        width: 4vw;
+      }
+    }
+  }
+}

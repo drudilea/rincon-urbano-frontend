@@ -1,0 +1,146 @@
+$color-green: #39c626;
+$dark-grey: #333;
+$med-dark-grey: #444;
+$soft-grey: #c9c9c9;
+$responsive-width: 800px;
+
+.prices-section {
+  background: url(https://i.ibb.co/mbXgm4X/Background-texture.png) no-repeat
+    center center;
+  background-size: cover;
+  image-rendering: crisp-edges;
+  image-rendering: optimizeQuality;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  .prices-container {
+    margin: 5% 0;
+    width: 95vw;
+    background-color: $dark-grey;
+    @media screen and (max-width: $responsive-width) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    h1 {
+      font-family: 'Montserrat', 'Source Sans Pro', 'Gothic A1', Arial,
+        Helvetica, sans-serif;
+      text-transform: uppercase;
+      font-size: 4.5vw;
+      color: white;
+      font-weight: 900;
+      margin: 0;
+      padding: 3% 3% 0 3%;
+      letter-spacing: -1.5px;
+      @media screen and (max-width: $responsive-width) {
+        font-size: 8vw;
+        text-align: center;
+      }
+    }
+    hr {
+      border: 4px solid $color-green;
+      width: 20%;
+      margin: 2% 3%;
+      @media screen and (max-width: $responsive-width) {
+        border: 3px solid $color-green;
+        width: 60%;
+        margin: 2vh 0;
+      }
+    }
+    .content-container {
+      display: flex;
+      justify-content: flex-start;
+      padding: 1% 3%;
+      @media screen and (max-width: $responsive-width) {
+        flex-direction: column;
+      }
+      .left-side-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        max-width: 55%;
+        margin-right: 5vw;
+        @media screen and (max-width: $responsive-width) {
+          max-width: 100%;
+          align-items: center;
+        }
+        p {
+          font-size: 25px;
+          letter-spacing: 0.5px;
+          color: white;
+          margin: 0;
+          line-height: 1.8;
+          font-weight: 400;
+          @media screen and (max-width: $responsive-width) {
+            font-size: 20px;
+            text-align: center;
+            max-width: 100%;
+          }
+        }
+
+        img {
+          margin: 20px 0 40px 0;
+          width: 20vw;
+          @media screen and (max-width: $responsive-width) {
+            width: 60vw;
+          }
+        }
+      }
+      .content-prices-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 2vw 2vw;
+        grid-template-areas: '. .' '. .';
+        margin-bottom: 2vh;
+        align-self: center;
+        @media screen and (max-width: $responsive-width) {
+          gap: 5vw 5vw;
+        }
+        .prices-item {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          background-color: rgba(255, 255, 255, 0.09);
+          border-radius: 20px;
+          color: #444;
+          width: 15vw;
+          text-align: center;
+          @media screen and (max-width: $responsive-width) {
+            width: 33vw;
+          }
+          span {
+            &.pack {
+              font-family: 'Source Sans Pro', 'Montserrat', 'Gothic A1', Arial,
+                Helvetica, sans-serif;
+              font-weight: 500;
+              font-size: 1.5em;
+              padding-top: 10%;
+              margin-bottom: 0%;
+              color: white;
+              @media screen and (max-width: $responsive-width) {
+                font-size: 15px;
+                text-align: center;
+              }
+            }
+            &.price {
+              font-family: 'Montserrat', 'Gothic A1', 'Source Sans Pro', Arial,
+                Helvetica, sans-serif;
+              color: #39c626;
+              font-weight: 800;
+              font-size: 4vw;
+              margin-bottom: 10%;
+              @media screen and (max-width: $responsive-width) {
+                font-size: 8vw;
+                text-align: center;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

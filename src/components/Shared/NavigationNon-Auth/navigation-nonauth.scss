@@ -1,0 +1,151 @@
+$color-green: #39c626;
+$dark-grey: #333;
+$med-dark-grey: #444;
+$soft-grey: #c9c9c9;
+$normal-responsive-width: 950px;
+$tablet-responsive-width: 1300px;
+$older-responsive-width: 400px;
+
+$break-small: 1000px;
+
+.navbar-container-nonauth {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1% 0;
+  width: 100vw;
+  //background-color: green;
+  @media screen and (max-width: $tablet-responsive-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2% 0;
+  }
+
+  /*
+  * LEFT SIDE OF NAV BAR:
+  *   - WHITE LOGO
+  *   - NAVIGATION INSIDE
+  */
+  .navbar-left {
+    font-family: 'Gothic A1', 'Source Sans Pro', 'Montserrat', Arial, Helvetica;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0 0 0 4%;
+
+    nav {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        width: 150px;
+        margin: 0 1vw;
+        @media screen and (max-width: $tablet-responsive-width) {
+          width: 100px;
+        }
+      }
+
+      ul {
+        display: flex;
+        align-items: center;
+        list-style-type: none;
+        @media screen and (max-width: $normal-responsive-width) {
+          display: none;
+        }
+      }
+
+      li {
+        margin-left: 3vw;
+        margin-right: 3vw;
+        a {
+          text-decoration: none;
+          color: white;
+          font-weight: bold;
+          font-size: 14px;
+          letter-spacing: 1px;
+        }
+        a:hover {
+          padding-bottom: 5px;
+          border-bottom: 4px solid $color-green;
+        }
+        @media screen and (max-width: $tablet-responsive-width) {
+          margin-left: 2vw;
+          margin-right: 2vw;
+        }
+      }
+    }
+  }
+
+  /*
+  * RIGTH SIDE OF NAV BAR:
+  *   - REGISTER AND LOGIN -> when not auth
+  *   - DECIDIR -> when auth
+  */
+
+  .navbar-right {
+    margin-right: 1vw;
+
+    //Botones de inicio de sesión y registro
+    .btn:link,
+    .btn:visited {
+      text-decoration: none;
+      padding: 10px 35px;
+      border-radius: 5px;
+      display: inline-block;
+      transition: all 0.3s;
+      font-size: 14px;
+      margin: 0 10px 0 0;
+      @media screen and (max-width: $tablet-responsive-width) {
+        font-size: 1em;
+        padding: 0.5em 1em;
+        font-size: 10px;
+      }
+      @media screen and (max-width: $older-responsive-width) {
+        padding: 1em 1.5em;
+        font-size: 5px;
+        display: block;
+        text-align: center;
+        margin: 10px 10px;
+      }
+    }
+
+    .btn-login {
+      background: white;
+      p {
+        color: $dark-grey;
+        text-decoration: none;
+        font-size: 15px;
+        letter-spacing: 0.5px;
+        padding: 0;
+        margin: 0;
+      }
+    }
+
+    .btn-register {
+      background: $color-green;
+      p {
+        color: #fff;
+        text-decoration: none;
+        font-size: 15px;
+        letter-spacing: 0.5px;
+        padding: 0;
+        margin: 0;
+      }
+    }
+
+    .btn:hover {
+      box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2);
+      transform: translateY(-3px);
+    }
+
+    .btn-login:hover {
+      background: $color-green;
+      p {
+        color: #fff;
+      }
+    }
+  }
+}

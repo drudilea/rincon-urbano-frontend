@@ -1,0 +1,134 @@
+$color-green: #39c626;
+$dark-grey: #333;
+$med-dark-grey: #444;
+$soft-grey: #c9c9c9;
+$responsive-width: 900px;
+
+.free-class-alert {
+  background-color: $color-green;
+  width: 100vw;
+  padding: 0.5vh 0;
+  p {
+    font-size: 1em;
+    font-family: 'Source Sans Pro', 'Montserrat', 'Gothic A1';
+    color: white;
+    margin: 0;
+    text-align: center;
+    font-weight: 600;
+    align-self: center;
+    @media screen and (max-width: $responsive-width) {
+      font-size: 0.8em;
+    }
+  }
+}
+.home-container {
+  background-image: url('https://firebasestorage.googleapis.com/v0/b/rincon-urbano.appspot.com/o/web-images%2FBackground%20graffiti%201%20(2).png?alt=media&token=bfc9b752-0e57-4bdc-90b4-a1d383a7c58a');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh;
+  max-width: 100vw;
+  overflow: hidden !important;
+
+  .free-class-adv {
+    background-color: $color-green;
+    width: 100vw;
+    color: white;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 2px 0;
+  }
+
+  h2 {
+    font-family: 'Source Sans Pro', 'Montserrat', 'Gothic A1';
+    font-size: 20px;
+    color: white;
+    font-weight: 400;
+    margin: 0;
+    padding: 1% 4% 0.5% 5%;
+    @media screen and (max-width: $responsive-width) {
+      font-size: 15px;
+      margin-top: 5%;
+    }
+  }
+
+  hr {
+    border: 2px solid $soft-grey;
+    width: 10%;
+    margin: 0 0 1% 5%;
+    text-align: center;
+    @media screen and (max-width: $responsive-width) {
+      width: 40%;
+      margin: 1% 0 0 5%;
+    }
+  }
+
+  .tabs-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    ul {
+      padding-inline-start: 0;
+      li {
+        align-self: center;
+        min-height: 2em;
+        @media screen and (max-width: $responsive-width) {
+          min-height: 2.5em;
+        }
+      }
+    }
+    .tab-list-container {
+      margin-bottom: 2%;
+      width: 50%;
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 0 0.5em;
+      grid-template-areas: '. . .';
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      @media screen and (max-width: $responsive-width) {
+        width: 90%;
+        margin: 10% 0;
+      }
+      .tab-item-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2% 0;
+        background-color: $soft-grey;
+        font-size: 1em;
+        font-family: 'Montserrat', 'Source Sans Pro', 'Gothic A1';
+        text-transform: uppercase;
+        font-weight: 600;
+        cursor: pointer;
+        outline: none;
+        transition: 0.2s all;
+        &.left {
+          border-radius: 10px 0 0 10px;
+        }
+
+        &.right {
+          border-radius: 0 10px 10px 0;
+        }
+
+        &:hover {
+          background-color: $color-green;
+          color: white;
+        }
+
+        &.active {
+          background-color: $color-green;
+          color: white;
+        }
+      }
+      @media screen and (max-width: $responsive-width) {
+        padding: 20px;
+        font-size: 4vw;
+      }
+    }
+  }
+}

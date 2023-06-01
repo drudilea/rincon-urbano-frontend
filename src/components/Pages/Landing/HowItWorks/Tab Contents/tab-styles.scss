@@ -1,0 +1,72 @@
+$color-green: #39c626;
+$dark-grey: #333;
+$med-dark-grey: #444;
+$soft-grey: #c9c9c9;
+$normal-responsive-width: 950px;
+$tablet-responsive-width: 1300px;
+$older-responsive-width: 400px;
+
+$streetdance-color: #be9c02;
+$popping-color: #df1c02;
+$hiphop-color: #2b39b8;
+$reggaeton-color: #ec7100;
+$heels-color: #ae01ff;
+$contemporaneo-color: #00cec2;
+$jazz-color: #ff1da4;
+
+.styles-content-container {
+  padding: 4% 4%;
+  background-color: #333;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  @media screen and (max-width: $normal-responsive-width) {
+    padding: 0;
+    height: 100%;
+    min-height: 30vh;
+  }
+  .styles-content {
+    font-size: 20pt;
+    font-weight: 900;
+    padding: 20px;
+    margin: 15px;
+    min-width: 12vw;
+    text-align: center;
+    border-radius: 10px;
+    color: white;
+    max-height: 5vh;
+    @media screen and (max-width: $normal-responsive-width) {
+      padding: 20px;
+      font-size: 10pt;
+      font-weight: 900;
+    }
+    &.popping {
+      background-color: $popping-color;
+    }
+
+    &.streetdance {
+      background-color: $streetdance-color;
+    }
+
+    &.hiphop {
+      background-color: $hiphop-color;
+    }
+
+    &.reggaeton {
+      background-color: $reggaeton-color;
+    }
+
+    &.heels {
+      background-color: $heels-color;
+    }
+
+    &.contemporaneo {
+      background-color: $contemporaneo-color;
+    }
+
+    &.jazz {
+      background-color: $jazz-color;
+    }
+  }
+}

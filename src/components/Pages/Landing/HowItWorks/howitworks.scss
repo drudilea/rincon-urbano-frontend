@@ -1,0 +1,98 @@
+$color-green: #39c626;
+$dark-grey: #333;
+$med-dark-grey: #444;
+$soft-grey: #c9c9c9;
+$normal-responsive-width: 950px;
+$tablet-responsive-width: 1300px;
+$older-responsive-width: 400px;
+
+.options-section {
+  min-height: 100%;
+  margin: 0;
+  background-color: $dark-grey;
+  h1 {
+    margin: 0;
+    padding: 1% 0;
+    text-align: center;
+    font-family: 'Montserrat', 'Source Sans Pro', 'Gothic A1', Arial, Helvetica;
+    text-transform: uppercase;
+    font-size: 6em;
+    color: $color-green;
+    font-weight: 900;
+    letter-spacing: -1.5px;
+    @media screen and (max-width: $normal-responsive-width) {
+      font-size: 10vw;
+      padding: 3vw 0;
+    }
+  }
+  .tabs-container {
+    background-color: $med-dark-grey;
+    .tab-list-container {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 0 15vw;
+      grid-template-areas: '. . .';
+      justify-content: center;
+      align-items: flex-end;
+      text-align: center;
+      margin: 0 10%;
+      padding-top: 1%;
+      @media screen and (max-width: $normal-responsive-width) {
+        grid-gap: 0;
+        margin: 0;
+        padding: 0;
+      }
+      .tab-item-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .tab-icon {
+          text-decoration: none;
+          list-style: none;
+          height: 50px;
+          filter: invert(0.4); //hacerlo gris
+          @media screen and (max-width: $normal-responsive-width) {
+            height: 25px;
+            padding: 1.5vh 0 0 0;
+          }
+        }
+        p {
+          font-family: 'Source Sans Pro', 'Gothic A1', 'Montserrat', Arial,
+            Helvetica;
+          font-size: 1.5em;
+          font-weight: 400;
+          margin: 0;
+          color: #707070;
+          text-align: center;
+          padding: 5px 0;
+          @media screen and (max-width: $normal-responsive-width) {
+            font-size: 2.5vw;
+          }
+        }
+        &:hover {
+          cursor: pointer;
+          .tab-icon {
+            filter: invert(1);
+          }
+          p {
+            color: white;
+          }
+        }
+        &.active {
+          border-bottom: solid 5px $color-green;
+          @media screen and (max-width: $normal-responsive-width) {
+            border-bottom: solid 3px $color-green;
+          }
+          .tab-icon {
+            filter: invert(1);
+          }
+          p {
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}

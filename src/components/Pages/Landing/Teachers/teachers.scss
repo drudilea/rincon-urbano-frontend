@@ -1,0 +1,177 @@
+$color-green: #39c626;
+$dark-grey: #333;
+$med-dark-grey: #444;
+$soft-grey: #c9c9c9;
+$responsive-width: 950px;
+$tablet-responsive-width: 1300px;
+$older-responsive-width: 400px;
+///////////////////////////
+$streetdance-color: #dfd602;
+$popping-color: #df1c02;
+$hiphop-color: #2b39b8;
+$reggaeton-color: #ec7100;
+$heels-color: #ae01ff;
+$contemporaneo-color: #00cec2;
+$jazz-color: #ff1da4;
+$dancehall-color: #239728;
+$estilosurbanos-color: #a6db51;
+$nimamau-color: #a6db51;
+
+.profes {
+  background: $dark-grey;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10vh;
+  max-width: 100vw;
+  @media screen and (max-width: $responsive-width) {
+    margin-bottom: 2vh;
+  }
+  h1 {
+    font-family: 'Montserrat', 'Gothic A1', 'Source Sans Pro';
+    text-transform: uppercase;
+    font-size: 100px;
+    color: $color-green;
+    font-weight: 900;
+    margin: 0;
+    padding: 7vh 0 2vh 5%;
+    max-width: 85%;
+    letter-spacing: -1.5px;
+    @media screen and (max-width: $tablet-responsive-width) {
+      padding: 5vw 0 0 5vw;
+    }
+    @media screen and (max-width: $responsive-width) {
+      font-size: 12vw;
+      padding: 5vw 0 0 5vw;
+    }
+  }
+  hr {
+    border: 2px solid $soft-grey;
+    width: 20%;
+    margin: 1vh 0 10vh 5%;
+    @media screen and (max-width: $tablet-responsive-width) {
+      margin: 0 0 10vh 5.2vw;
+    }
+    @media screen and (max-width: $responsive-width) {
+      margin: 2vw 5vw;
+    }
+  }
+  .carousel-container {
+    background-color: #555;
+    @media screen and (max-width: $responsive-width) {
+      margin: 1vh 0 3vh 0;
+    }
+    .profe-container {
+      transition: 0.5s all;
+      text-align: center;
+      padding: 40px;
+
+      .profe-img {
+        width: 20vw;
+        margin-bottom: 20px;
+        border-radius: 50%;
+        @media screen and (max-width: $responsive-width) {
+          width: 26vw;
+          margin-bottom: 2vw;
+        }
+      }
+
+      .prueba {
+        position: absolute;
+        top: 20%;
+        left: 42%;
+        font-size: 20px;
+        display: none;
+      }
+
+      .fullname {
+        text-transform: uppercase;
+        font-size: 40px;
+        font-weight: 900;
+        @media screen and (max-width: $tablet-responsive-width) {
+          font-size: 2vw;
+        }
+        @media screen and (max-width: $responsive-width) {
+          font-size: 3vw;
+        }
+        .name {
+          color: white;
+          padding: 10px;
+          @media screen and (max-width: $responsive-width) {
+            padding: 2px 5px;
+          }
+          &.popping {
+            background-color: $popping-color;
+          }
+
+          &.streetdance {
+            background-color: $streetdance-color;
+          }
+
+          &.dancehall {
+            background-color: $dancehall-color;
+          }
+
+          &.estilosurbanos {
+            background-color: $estilosurbanos-color;
+          }
+
+          &.hiphop {
+            background-color: $hiphop-color;
+          }
+
+          &.reggaeton {
+            background-color: $reggaeton-color;
+          }
+
+          &.heels {
+            background-color: $heels-color;
+          }
+
+          &.contemporaneo {
+            background-color: $contemporaneo-color;
+          }
+
+          &.jazz {
+            background-color: $jazz-color;
+          }
+
+          &.nimamau {
+            background-color: $nimamau-color;
+          }
+        }
+        .lastname {
+          background-color: black;
+          color: white;
+          padding: 10px;
+          @media screen and (max-width: $responsive-width) {
+            padding: 2px 5px;
+          }
+        }
+      }
+    }
+  }
+  .profe-img:hover ~ .profe-img {
+    transform: translate3d(100px, 0, 0);
+  }
+  .carousel-container:hover .profe-container {
+    opacity: 0.3;
+  }
+  .carousel-container:hover .profe-container:hover {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  .profe-container:hover .prueba {
+    display: block;
+  }
+}
+
+.BrainhubCarousel__arrows {
+  background-color: #39c626 !important;
+
+  @media screen and (max-width: $responsive-width) {
+    padding: 15px !important;
+    display: block !important;
+    background-color: #39c626 !important;
+    transform: scale(0.5);
+  }
+}

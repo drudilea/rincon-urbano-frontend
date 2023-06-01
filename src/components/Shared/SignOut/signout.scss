@@ -1,0 +1,40 @@
+$responsive-width: 900px;
+$color-green: #39c626;
+$dark-grey: #333;
+$med-dark-grey: #444;
+$soft-grey: #888;
+
+button {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  .button-signout {
+    display: flex;
+    background-color: transparent;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    font-family: 'Montserrat', 'Source Sans Pro', 'Gothic A1';
+    font-weight: 600;
+    font-size: 15px;
+    text-transform: uppercase;
+    margin: 0 1%;
+    transition: 0.3s all;
+    &:hover {
+      border-bottom: 4px solid $color-green;
+    }
+    img {
+      max-height: 20px;
+      max-width: 30px;
+      filter: invert(1);
+      padding: 10px;
+      @media screen and (max-width: $responsive-width) {
+        display: none;
+      }
+    }
+    @media screen and (max-width: $responsive-width) {
+      font-size: 10px;
+    }
+  }
+}

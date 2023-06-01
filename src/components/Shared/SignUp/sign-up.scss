@@ -1,0 +1,113 @@
+//@media screen and (max-width: $responsive-width) {}
+$responsive-width: 900px;
+$responsive-height: 700px;
+$color-green: #39c626;
+$dark-grey: #333;
+$med-dark-grey: #444;
+$background-grey: #eee;
+
+.signup-container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(https://firebasestorage.googleapis.com/v0/b/rincon-urbano.appspot.com/o/web-images%2Fnosotros-background.png?alt=media&token=07984243-3781-4c4f-b9eb-b80cf48867ed)
+    no-repeat center center;
+  background-size: cover;
+  @media screen and (max-width: $responsive-width) {
+    max-height: -webkit-fill-available;
+  }
+
+  .signup-frame {
+    background-color: rgba(256, 256, 256, 0.05);
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0 2vw;
+    border-radius: 20px;
+    @media screen and (max-width: $responsive-width) {
+      padding: 0 12vw;
+      background-color: rgba(256, 256, 256, 0.1);
+    }
+
+    .logo-top {
+      max-height: 100px;
+      @media screen and (max-width: $responsive-width) {
+        max-height: 90px;
+      }
+
+      @media screen and (max-height: $responsive-height) {
+        max-height: 50px;
+      }
+    }
+
+    .signup-form-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .signup-socials {
+      display: flex;
+      flex-direction: column;
+      hr {
+        width: 60%;
+        overflow: visible; /* For IE */
+        padding: 0;
+        border: 0;
+        border-top: thin solid white;
+        color: white;
+        text-align: center;
+
+        &:after {
+          content: 'O registrate con';
+          display: inline-block;
+          position: relative;
+          top: -0em;
+          font-size: 15px;
+          padding: 0 0.4em;
+          color: white;
+        }
+      }
+      .socials-btn-container {
+        display: flex;
+        flex: row;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 200px;
+
+        .socials {
+          background-color: transparent;
+          border-radius: 50%;
+          width: 60px;
+          height: 60px;
+          margin: 0;
+          padding: 0;
+          border: none;
+          cursor: pointer;
+          @media screen and (max-height: $responsive-height) {
+            width: 40px;
+            height: 40px;
+          }
+
+          img {
+            width: 60px;
+            height: 60px;
+            margin: 0;
+            @media screen and (max-height: $responsive-height) {
+              width: 40px;
+              height: 40px;
+            }
+            &:hover {
+              filter: brightness(1.5);
+            }
+          }
+        }
+      }
+    }
+  }
+}

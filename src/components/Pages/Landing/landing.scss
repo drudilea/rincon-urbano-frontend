@@ -1,0 +1,14 @@
+$color-green: #39c626;
+$dark-grey: #333;
+$med-dark-grey: #444;
+$soft-grey: #c9c9c9;
+$responsive-width: 800px;
+.space-between-sections {
+  min-height: 50px;
+  background: url(https://i.ibb.co/mbXgm4X/Background-texture.png) no-repeat
+    center center;
+  background-size: cover;
+  @media screen and (max-width: $responsive-width) {
+    min-height: 30px;
+  }
+}

@@ -1,0 +1,91 @@
+//@media screen and (max-width: $responsive-width) {}
+$responsive-width: 900px;
+$responsive-height: 700px;
+$color-green: #39c626;
+$dark-grey: #333;
+$med-dark-grey: #444;
+$background-grey: #eee;
+.payment-result-page {
+  background-image: url('https://firebasestorage.googleapis.com/v0/b/rincon-urbano.appspot.com/o/web-images%2FBackground%20graffiti%201%20(2).png?alt=media&token=bfc9b752-0e57-4bdc-90b4-a1d383a7c58a');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  .payment-result-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    .payment-result-content {
+      background-color: rgba($color: #fff, $alpha: 0.1);
+      padding: 10vh 10vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-radius: 10px;
+      .payment-result-image-container {
+        .payment-result-image {
+          width: 10vw;
+          filter: invert(1);
+          @media screen and (max-width: $responsive-width) {
+            width: 30vw;
+          }
+        }
+      }
+
+      .payment-result-message-container {
+        max-width: 40vw;
+        text-align: center;
+        @media screen and (max-width: $responsive-width) {
+          max-width: 90vw;
+        }
+        .payment-result-message {
+          color: white;
+          font-family: 'Source Sans Pro', 'Gothic A1', 'Montserrat', Arial;
+          font-size: 1.5em;
+        }
+      }
+
+      .payment-result-buttons-container {
+        display: flex;
+        margin: 3vh 5vw;
+
+        .payment-result-button {
+          font-family: 'Source Sans Pro', 'Gothic A1', 'Montserrat', Arial;
+          font-size: 1.2em;
+          text-align: center;
+          font-weight: 400;
+          background: $color-green;
+          border: none;
+          color: #fff;
+          overflow: hidden;
+          transition: all 0.3s;
+          border-radius: 5px;
+          padding: 0.5vh 1vw;
+          margin: 0 0.5vh;
+          cursor: no-drop;
+          @media screen and (max-width: $responsive-width) {
+            padding: 0.5vh 5vw;
+          }
+
+          &:hover:enabled,
+          &:active:enabled {
+            text-decoration: none;
+            color: #39c626;
+            border-color: #39c626;
+            background: #fff;
+            box-shadow: 2px 2px 5px #333;
+            cursor: pointer;
+          }
+          &:disabled {
+            opacity: 0.5;
+          }
+        }
+      }
+    }
+  }
+}

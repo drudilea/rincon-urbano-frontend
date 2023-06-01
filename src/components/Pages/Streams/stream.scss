@@ -1,0 +1,85 @@
+//@media screen and (max-width: $responsive-width) {}
+$responsive-width: 900px;
+$color-green: #39c626;
+$dark-grey: #333;
+$med-dark-grey: #444;
+$background-grey: #eee;
+
+.view-stream-container {
+  background-image: url('https://firebasestorage.googleapis.com/v0/b/rincon-urbano.appspot.com/o/web-images%2FBackground%20graffiti%201%20(2).png?alt=media&token=bfc9b752-0e57-4bdc-90b4-a1d383a7c58a');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  @media screen and (max-width: $responsive-width) {
+    min-height: 100vh;
+  }
+
+  .connection-text {
+    text-align: center;
+    background-color: rgba(150, 150, 150, 0.2);
+    color: white;
+    padding: 1em 0;
+    margin: 0 5em;
+    @media screen and (max-width: $responsive-width) {
+      margin-top: 1em;
+      font-size: 0.6em;
+    }
+  }
+
+  .stream-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding-top: 50.25%;
+    margin: 1vh;
+    @media screen and (max-width: $responsive-width) {
+      padding-top: 56.25%;
+    }
+    .react-player {
+      position: absolute;
+      top: 5vh;
+      left: 50%;
+      margin-left: -45%;
+      @media screen and (max-width: $responsive-width) {
+        top: 2vh;
+      }
+    }
+  }
+
+  .users-pics-container {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: rgba(250, 250, 250, 0.2);
+    width: 100vw;
+    padding: 1vh 0;
+    @media screen and (max-width: $responsive-width) {
+      padding: 1vh 0;
+      margin: 2vh 0 0 0;
+    }
+    .user-item {
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: center;
+      align-items: center;
+      margin: 0 1vw;
+      img {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        @media screen and (max-width: $responsive-width) {
+          width: 50px;
+          height: 50px;
+        }
+      }
+      h3 {
+        font-size: 1em;
+        margin: 0;
+        color: white;
+      }
+    }
+  }
+}
